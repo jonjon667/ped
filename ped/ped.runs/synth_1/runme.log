@@ -1,0 +1,360 @@
+
+*** Running vivado
+    with args -log muxdisplay7seg.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source muxdisplay7seg.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source muxdisplay7seg.tcl -notrace
+Command: synth_design -top muxdisplay7seg -part xa7a35tcpg236-1I
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xa7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xa7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 291636 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 357.090 ; gain = 99.059
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'muxdisplay7seg' [C:/project_2/project_2.srcs/sources_1/new/muxdisplay7seg.vhd:22]
+INFO: [Synth 8-3491] module 'conversorDecimal' declared at 'C:/project_2/project_2.srcs/sources_1/new/conversorDecimal.vhd:34' bound to instance 'decimalT1' of component 'conversorDecimal' [C:/project_2/project_2.srcs/sources_1/new/muxdisplay7seg.vhd:51]
+INFO: [Synth 8-638] synthesizing module 'conversorDecimal' [C:/project_2/project_2.srcs/sources_1/new/conversorDecimal.vhd:41]
+INFO: [Synth 8-226] default block is never used [C:/project_2/project_2.srcs/sources_1/new/conversorDecimal.vhd:44]
+INFO: [Synth 8-226] default block is never used [C:/project_2/project_2.srcs/sources_1/new/conversorDecimal.vhd:63]
+INFO: [Synth 8-256] done synthesizing module 'conversorDecimal' (1#1) [C:/project_2/project_2.srcs/sources_1/new/conversorDecimal.vhd:41]
+WARNING: [Synth 8-614] signal 'count' is read in the process but is not in the sensitivity list [C:/project_2/project_2.srcs/sources_1/new/muxdisplay7seg.vhd:52]
+INFO: [Synth 8-226] default block is never used [C:/project_2/project_2.srcs/sources_1/new/muxdisplay7seg.vhd:66]
+INFO: [Synth 8-3491] module 'display7seg' declared at 'C:/project_2/project_2.srcs/sources_1/new/display7seg.vhd:4' bound to instance 'driver_BCD_7seg' of component 'display7seg' [C:/project_2/project_2.srcs/sources_1/new/muxdisplay7seg.vhd:98]
+INFO: [Synth 8-638] synthesizing module 'display7seg' [C:/project_2/project_2.srcs/sources_1/new/display7seg.vhd:10]
+INFO: [Synth 8-226] default block is never used [C:/project_2/project_2.srcs/sources_1/new/display7seg.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'display7seg' (2#1) [C:/project_2/project_2.srcs/sources_1/new/display7seg.vhd:10]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net seg[0] with 1st driver pin 'muxdisplay7seg:/driver_BCD_7seg/seg[0]' [C:/project_2/project_2.srcs/sources_1/new/muxdisplay7seg.vhd:11]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net seg[0] with 2nd driver pin 'VCC' [C:/project_2/project_2.srcs/sources_1/new/muxdisplay7seg.vhd:11]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net seg[0] is connected to constant driver, other driver is ignored [C:/project_2/project_2.srcs/sources_1/new/muxdisplay7seg.vhd:11]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net seg[1] with 1st driver pin 'muxdisplay7seg:/driver_BCD_7seg/seg[1]' [C:/project_2/project_2.srcs/sources_1/new/muxdisplay7seg.vhd:11]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net seg[1] with 2nd driver pin 'VCC' [C:/project_2/project_2.srcs/sources_1/new/muxdisplay7seg.vhd:11]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net seg[1] is connected to constant driver, other driver is ignored [C:/project_2/project_2.srcs/sources_1/new/muxdisplay7seg.vhd:11]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net seg[2] with 1st driver pin 'muxdisplay7seg:/driver_BCD_7seg/seg[2]' [C:/project_2/project_2.srcs/sources_1/new/muxdisplay7seg.vhd:11]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net seg[2] with 2nd driver pin 'VCC' [C:/project_2/project_2.srcs/sources_1/new/muxdisplay7seg.vhd:11]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net seg[2] is connected to constant driver, other driver is ignored [C:/project_2/project_2.srcs/sources_1/new/muxdisplay7seg.vhd:11]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net seg[3] with 1st driver pin 'muxdisplay7seg:/driver_BCD_7seg/seg[3]' [C:/project_2/project_2.srcs/sources_1/new/muxdisplay7seg.vhd:11]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net seg[3] with 2nd driver pin 'VCC' [C:/project_2/project_2.srcs/sources_1/new/muxdisplay7seg.vhd:11]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net seg[3] is connected to constant driver, other driver is ignored [C:/project_2/project_2.srcs/sources_1/new/muxdisplay7seg.vhd:11]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net seg[4] with 1st driver pin 'muxdisplay7seg:/driver_BCD_7seg/seg[4]' [C:/project_2/project_2.srcs/sources_1/new/muxdisplay7seg.vhd:11]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net seg[4] with 2nd driver pin 'VCC' [C:/project_2/project_2.srcs/sources_1/new/muxdisplay7seg.vhd:11]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net seg[4] is connected to constant driver, other driver is ignored [C:/project_2/project_2.srcs/sources_1/new/muxdisplay7seg.vhd:11]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net seg[5] with 1st driver pin 'muxdisplay7seg:/driver_BCD_7seg/seg[5]' [C:/project_2/project_2.srcs/sources_1/new/muxdisplay7seg.vhd:11]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net seg[5] with 2nd driver pin 'VCC' [C:/project_2/project_2.srcs/sources_1/new/muxdisplay7seg.vhd:11]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net seg[5] is connected to constant driver, other driver is ignored [C:/project_2/project_2.srcs/sources_1/new/muxdisplay7seg.vhd:11]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net seg[6] with 1st driver pin 'muxdisplay7seg:/driver_BCD_7seg/seg[6]' [C:/project_2/project_2.srcs/sources_1/new/muxdisplay7seg.vhd:11]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net seg[6] with 2nd driver pin 'VCC' [C:/project_2/project_2.srcs/sources_1/new/muxdisplay7seg.vhd:11]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net seg[6] is connected to constant driver, other driver is ignored [C:/project_2/project_2.srcs/sources_1/new/muxdisplay7seg.vhd:11]
+INFO: [Synth 8-256] done synthesizing module 'muxdisplay7seg' (3#1) [C:/project_2/project_2.srcs/sources_1/new/muxdisplay7seg.vhd:22]
+WARNING: [Synth 8-3917] design muxdisplay7seg has port seg[6] driven by constant 1
+WARNING: [Synth 8-3917] design muxdisplay7seg has port seg[5] driven by constant 1
+WARNING: [Synth 8-3917] design muxdisplay7seg has port seg[4] driven by constant 1
+WARNING: [Synth 8-3917] design muxdisplay7seg has port seg[3] driven by constant 1
+WARNING: [Synth 8-3917] design muxdisplay7seg has port seg[2] driven by constant 1
+WARNING: [Synth 8-3917] design muxdisplay7seg has port seg[1] driven by constant 1
+WARNING: [Synth 8-3917] design muxdisplay7seg has port seg[0] driven by constant 1
+WARNING: [Synth 8-3331] design muxdisplay7seg has unconnected port B[3]
+WARNING: [Synth 8-3331] design muxdisplay7seg has unconnected port B[2]
+WARNING: [Synth 8-3331] design muxdisplay7seg has unconnected port B[1]
+WARNING: [Synth 8-3331] design muxdisplay7seg has unconnected port B[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 411.965 ; gain = 153.934
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 411.965 ; gain = 153.934
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 411.965 ; gain = 153.934
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xa7a35tcpg236-1I
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/João de Assis/Downloads/Basys3.xdc]
+Finished Parsing XDC File [C:/Users/João de Assis/Downloads/Basys3.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/João de Assis/Downloads/Basys3.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/muxdisplay7seg_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/muxdisplay7seg_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.052 . Memory (MB): peak = 717.754 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 717.754 ; gain = 459.723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xa7a35tcpg236-1I
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 717.754 ; gain = 459.723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 717.754 ; gain = 459.723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 717.754 ; gain = 459.723
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      4 Bit        Muxes := 2     
+	  16 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module muxdisplay7seg 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      4 Bit        Muxes := 2     
+Module conversorDecimal 
+Detailed RTL Component Info : 
++---Muxes : 
+	  16 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3917] design muxdisplay7seg has port seg[6] driven by constant 1
+WARNING: [Synth 8-3917] design muxdisplay7seg has port seg[5] driven by constant 1
+WARNING: [Synth 8-3917] design muxdisplay7seg has port seg[4] driven by constant 1
+WARNING: [Synth 8-3917] design muxdisplay7seg has port seg[3] driven by constant 1
+WARNING: [Synth 8-3917] design muxdisplay7seg has port seg[2] driven by constant 1
+WARNING: [Synth 8-3917] design muxdisplay7seg has port seg[1] driven by constant 1
+WARNING: [Synth 8-3917] design muxdisplay7seg has port seg[0] driven by constant 1
+WARNING: [Synth 8-3331] design muxdisplay7seg has unconnected port B[3]
+WARNING: [Synth 8-3331] design muxdisplay7seg has unconnected port B[2]
+WARNING: [Synth 8-3331] design muxdisplay7seg has unconnected port B[1]
+WARNING: [Synth 8-3331] design muxdisplay7seg has unconnected port B[0]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net seg[6] with 1st driver pin 'driver_BCD_7seg/seg_inferred/out0[6]' [C:/project_2/project_2.srcs/sources_1/new/display7seg.vhd:14]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net seg[6] with 2nd driver pin 'VCC' [C:/project_2/project_2.srcs/sources_1/new/display7seg.vhd:14]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net seg[6] is connected to constant driver, other driver is ignored [C:/project_2/project_2.srcs/sources_1/new/display7seg.vhd:14]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net seg[5] with 1st driver pin 'driver_BCD_7seg/seg_inferred/out0[5]' [C:/project_2/project_2.srcs/sources_1/new/display7seg.vhd:14]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net seg[5] with 2nd driver pin 'VCC' [C:/project_2/project_2.srcs/sources_1/new/display7seg.vhd:14]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net seg[5] is connected to constant driver, other driver is ignored [C:/project_2/project_2.srcs/sources_1/new/display7seg.vhd:14]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net seg[4] with 1st driver pin 'driver_BCD_7seg/seg_inferred/out0[4]' [C:/project_2/project_2.srcs/sources_1/new/display7seg.vhd:14]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net seg[4] with 2nd driver pin 'VCC' [C:/project_2/project_2.srcs/sources_1/new/display7seg.vhd:14]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net seg[4] is connected to constant driver, other driver is ignored [C:/project_2/project_2.srcs/sources_1/new/display7seg.vhd:14]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net seg[3] with 1st driver pin 'driver_BCD_7seg/seg_inferred/out0[3]' [C:/project_2/project_2.srcs/sources_1/new/display7seg.vhd:14]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net seg[3] with 2nd driver pin 'VCC' [C:/project_2/project_2.srcs/sources_1/new/display7seg.vhd:14]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net seg[3] is connected to constant driver, other driver is ignored [C:/project_2/project_2.srcs/sources_1/new/display7seg.vhd:14]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net seg[2] with 1st driver pin 'driver_BCD_7seg/seg_inferred/out0[2]' [C:/project_2/project_2.srcs/sources_1/new/display7seg.vhd:14]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net seg[2] with 2nd driver pin 'VCC' [C:/project_2/project_2.srcs/sources_1/new/display7seg.vhd:14]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net seg[2] is connected to constant driver, other driver is ignored [C:/project_2/project_2.srcs/sources_1/new/display7seg.vhd:14]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net seg[1] with 1st driver pin 'driver_BCD_7seg/seg_inferred/out0[1]' [C:/project_2/project_2.srcs/sources_1/new/display7seg.vhd:14]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net seg[1] with 2nd driver pin 'VCC' [C:/project_2/project_2.srcs/sources_1/new/display7seg.vhd:14]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net seg[1] is connected to constant driver, other driver is ignored [C:/project_2/project_2.srcs/sources_1/new/display7seg.vhd:14]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net seg[0] with 1st driver pin 'driver_BCD_7seg/seg_inferred/out0[0]' [C:/project_2/project_2.srcs/sources_1/new/display7seg.vhd:14]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net seg[0] with 2nd driver pin 'VCC' [C:/project_2/project_2.srcs/sources_1/new/display7seg.vhd:14]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net seg[0] is connected to constant driver, other driver is ignored [C:/project_2/project_2.srcs/sources_1/new/display7seg.vhd:14]
+WARNING: [Synth 8-3332] Sequential element (Sbcd_reg[3]) is unused and will be removed from module muxdisplay7seg.
+WARNING: [Synth 8-3332] Sequential element (Sbcd_reg[2]) is unused and will be removed from module muxdisplay7seg.
+WARNING: [Synth 8-3332] Sequential element (Sbcd_reg[1]) is unused and will be removed from module muxdisplay7seg.
+WARNING: [Synth 8-3332] Sequential element (Sbcd_reg[0]) is unused and will be removed from module muxdisplay7seg.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 717.754 ; gain = 459.723
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:35 . Memory (MB): peak = 735.973 ; gain = 477.941
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:35 . Memory (MB): peak = 736.047 ; gain = 478.016
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:35 . Memory (MB): peak = 746.082 ; gain = 488.051
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:37 . Memory (MB): peak = 746.082 ; gain = 488.051
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:37 . Memory (MB): peak = 746.082 ; gain = 488.051
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:37 . Memory (MB): peak = 746.082 ; gain = 488.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:37 . Memory (MB): peak = 746.082 ; gain = 488.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:37 . Memory (MB): peak = 746.082 ; gain = 488.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:37 . Memory (MB): peak = 746.082 ; gain = 488.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     4|
+|3     |LUT1   |     2|
+|4     |LUT2   |     5|
+|5     |FDRE   |    22|
+|6     |IBUF   |     1|
+|7     |OBUF   |    11|
++------+-------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |    46|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:37 . Memory (MB): peak = 746.082 ; gain = 488.051
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 21 critical warnings and 15 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:28 . Memory (MB): peak = 746.082 ; gain = 182.262
+Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:00:37 . Memory (MB): peak = 746.082 ; gain = 488.051
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+24 Infos, 27 Warnings, 42 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:40 . Memory (MB): peak = 757.219 ; gain = 511.871
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'C:/ped/ped.runs/synth_1/muxdisplay7seg.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file muxdisplay7seg_utilization_synth.rpt -pb muxdisplay7seg_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 757.219 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Nov 22 20:54:05 2018...
