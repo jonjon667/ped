@@ -67,12 +67,27 @@ architecture Behavioral of seletor is
        Port ( A : in STD_LOGIC_VECTOR (3 downto 0);
               saida : out STD_LOGIC_VECTOR (3 downto 0));
    end  component;
-   
+
+  component multiplicador is
+    Port ( a, b : in STD_LOGIC_VECTOR(3 downto 0);
+           s : out STD_LOGIC_VECTOR(3 downto 0) );
+  end component;
+
+  component divisor is
+    Port ( a, b : in STD_LOGIC_VECTOR(3 downto 0);
+           s : out STD_LOGIC_VECTOR(3 downto 0) );
+  end component;
+
+  component mod is
+    Port ( a, b : in STD_LOGIC_VECTOR(3 downto 0);
+           s : out STD_LOGIC_VECTOR(3 downto 0) );
+  end component;
    
     signal errorS,errorSub : STD_LOGIC:='0';
     signal neg : STD_LOGIC_VECTOR(3 downto 0);
     signal soma,xoab,orba,opb,notia: STD_LOGIC_VECTOR(3 downto 0);
     signal subs: STD_LOGIC_VECTOR(3 downto 0);
+    signal mult, div, mod, pow : STD_LOGIC_VECTOR(3 downto 0);
 begin
     
     negativ: negative PORT MAP(a, neg);
@@ -81,6 +96,10 @@ begin
     exorab : xorab port map(a,b,xoab);
     oab : orab port map(a,b,orba);
     naoa : nota port map(a,notia);
+    multiplicar : multiplicador PORT MAP(a, b, mult);
+    dividir : divisor PORT MAP(a, b, div);
+    mod1 : mod PORT MAP(a, b, mod);
+    pow : multiplicador PORT MAP(a, a, pow);
     
     
     process(a,b,s)
@@ -96,11 +115,11 @@ begin
         when "0111" => f <= notia;
         when "1000" => f <= soma;
         when "1001" => f <= subs;
-        when "1010" => f <= std_logic_vector(to_unsigned((to_integer(unsigned(a)) * to_integer(unsigned(b))),4));
-        when "1011" => f <= std_logic_vector(to_unsigned(to_integer(unsigned(a)) / to_integer(unsigned(b)),4));
-        when "1100" => f <= a; -- implement
-        when "1101" => f <= std_logic_vector(to_unsigned((to_integer(unsigned(a)) * to_integer(unsigned(a))),4));
-        when "1110" => f <= neg; -- implement
+        when "1010" => f <= mult;
+        when "1011" => f <= div;
+        when "1100" => f <= mod;
+        when "1101" => f <= pow;
+        when "1110" => f <= neg;
         when "1111" => f <= a + "0001";
         end case;
     end process;
